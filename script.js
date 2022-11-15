@@ -14,6 +14,12 @@ jQuery(document).ready(function ($) {
         $('.bts-popup').addClass('is-visible');
     });
 
+    // open popup
+    $('.btn').on('click', function () {
+        $('.bts-popup-content').fadeOut();
+        $('.thankYou').addClass('showThankYou');
+    })
+
 
     //close popup when clicking the esc keyboard button
 
@@ -23,29 +29,29 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    const button = document.getElementById('button');
-    const toasts = document.getElementById('toasts');
-    const messages = [
-        'The best quotes sent straight to your phone',
-    ];
-    const types = ['success'];
-    button.addEventListener('click', () => createNotification());
-    function createNotification(message = null, type = null) {
-        const notif = document.createElement('div');
-        notif.classList.add('toast');
-        notif.classList.add(type ? type : getRandomType());
-        notif.innerText = message ? message : getRandomMessage();
-        toasts.appendChild(notif);
-        setTimeout(() => {
-            notif.remove();
-        }, 3000);
-    }
-    function getRandomMessage() {
-        return messages[Math.floor(Math.random() * messages.length)];
-    }
-    function getRandomType() {
-        return types[Math.floor(Math.random() * types.length)];
-    }
+    // const button = document.getElementById('button');
+    // const toasts = document.getElementById('toasts');
+    // const messages = [
+    //     'The best quotes sent straight to your phone',
+    // ];
+    // const types = ['success'];
+    // button.addEventListener('click', () => createNotification());
+    // function createNotification(message = null, type = null) {
+    //     const notif = document.createElement('div');
+    //     notif.classList.add('toast');
+    //     notif.classList.add(type ? type : getRandomType());
+    //     notif.innerText = message ? message : getRandomMessage();
+    //     toasts.appendChild(notif);
+    //     setTimeout(() => {
+    //         notif.remove();
+    //     }, 3000);
+    // }
+    // function getRandomMessage() {
+    //     return messages[Math.floor(Math.random() * messages.length)];
+    // }
+    // function getRandomType() {
+    //     return types[Math.floor(Math.random() * types.length)];
+    // }
 
     //close popup
     // $('.bts-popup').on('click', function (event) {
