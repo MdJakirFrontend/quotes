@@ -94,10 +94,12 @@ body {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     transform: scale(0.8);
+    background-color: #fff;
 }
 
 .bts-popup-content {
     max-width: 600px;
+    /* min-height: 360px; */
     width: 100%;
     margin: auto;
     text-align: center;
@@ -116,8 +118,6 @@ body {
     font-size: 14px;
     line-height: 16px;
 }
-
-
 
 .bts-popup-container .bts-popup-close {
     text-decoration: none;
@@ -161,7 +161,23 @@ body {
     background-color: #008000;
     color: #fff;
     right: 10px;
+}
 
+.thankYou {
+    padding: 96px 50px;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    /* min-height: 360px; */
+    background-color: #fff;
+    transition: all ease 0.3s;
+}
+
+.showThankYou {
+    opacity: 1;
+    visibility: visible;
 }
 
 @media (min-width: 575px) {
